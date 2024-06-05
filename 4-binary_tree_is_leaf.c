@@ -1,17 +1,14 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_delte - Delete an entire binary tree
- * @tree: tree root
- * Return: no return
+ * binary_tree_is_leaf - Check if a node is a leaf
+ * @node: pointer to the node to check
+ * Return: 1 if node is a leaf, otherwise 0
  */
 int binary_tree_is_leaf(const binary_tree_t *node)
 {
-	if (tree == NULL)
-		return;
+	if (node->left == NULL && node->right == NULL)
+		return 1;
 
-	binary_tree_delete(tree->left);
-	binary_tree_delete(tree->right);
-
-	free(tree);
+	return 0;
 }
